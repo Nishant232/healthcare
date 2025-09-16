@@ -14,6 +14,8 @@ import Settings from "@/pages/Settings";
 import Consent from "@/pages/Consent";
 import Upload from "@/pages/Upload";
 import Reports from "@/pages/Reports";
+import ManageUsers from "@/pages/ManageUsers";
+import Analytics from "@/pages/Analytics";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -77,6 +79,8 @@ const App = () => (
                 <Route path="consents" element={<Consent />} />
                 <Route path="upload" element={<Upload />} />
                 <Route path="reports" element={<Reports />} />
+                <Route path="users" element={<ManageUsers />} />
+                <Route path="analytics" element={<Analytics />} />
                 <Route path="settings" element={<Settings />} />
               </Route>
               

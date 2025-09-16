@@ -48,6 +48,7 @@ const Login: React.FC = () => {
   const roleOptions = [
     { value: 'doctor', label: 'Doctor', description: 'Healthcare Provider' },
     { value: 'lab', label: 'Laboratory', description: 'Lab Technician' },
+    { value: 'patient', label: 'Patient', description: 'Healthcare Consumer' },
     { value: 'admin', label: 'Administrator', description: 'System Admin' },
   ];
 
