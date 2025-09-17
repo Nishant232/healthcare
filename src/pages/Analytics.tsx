@@ -288,17 +288,17 @@ const Analytics: React.FC = () => {
       </div>
 
       {/* Charts Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* User Growth Chart */}
-        <Card>
-          <CardHeader>
-            <CardTitle>User Growth Trends</CardTitle>
-            <CardDescription>Monthly growth across user types</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ChartContainer config={chartConfig} className="h-80">
+        <div className="bg-card dark:bg-card p-6 rounded-xl shadow-md border">
+          <div className="mb-4">
+            <h3 className="text-lg font-semibold text-foreground">User Growth Trends</h3>
+            <p className="text-sm text-muted-foreground">Monthly growth across user types</p>
+          </div>
+          <div className="w-full h-80">
+            <ChartContainer config={chartConfig} className="w-full h-full">
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={userGrowthData}>
+                <LineChart data={userGrowthData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="month" />
                   <YAxis />
@@ -309,19 +309,19 @@ const Analytics: React.FC = () => {
                 </LineChart>
               </ResponsiveContainer>
             </ChartContainer>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
 
         {/* Reports Upload Trends */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Weekly Report Uploads</CardTitle>
-            <CardDescription>Reports uploaded per week</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ChartContainer config={chartConfig} className="h-80">
+        <div className="bg-card dark:bg-card p-6 rounded-xl shadow-md border">
+          <div className="mb-4">
+            <h3 className="text-lg font-semibold text-foreground">Weekly Report Uploads</h3>
+            <p className="text-sm text-muted-foreground">Reports uploaded per week</p>
+          </div>
+          <div className="w-full h-80">
+            <ChartContainer config={chartConfig} className="w-full h-full">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={reportsData}>
+                <BarChart data={reportsData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="week" />
                   <YAxis />
@@ -330,8 +330,8 @@ const Analytics: React.FC = () => {
                 </BarChart>
               </ResponsiveContainer>
             </ChartContainer>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
 
       {/* Consent Trends and Recent Activity */}
