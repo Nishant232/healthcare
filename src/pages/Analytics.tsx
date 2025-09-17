@@ -343,7 +343,7 @@ const Analytics: React.FC = () => {
             <CardDescription>Breakdown of consent statuses</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="h-64">
+            <ChartContainer config={chartConfig} className="h-64">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -362,7 +362,7 @@ const Analytics: React.FC = () => {
                   <ChartTooltip content={<ChartTooltipContent />} />
                 </PieChart>
               </ResponsiveContainer>
-            </div>
+            </ChartContainer>
             <div className="flex flex-col gap-2 mt-4">
               {consentData.map((item, index) => (
                 <div key={index} className="flex items-center justify-between">
